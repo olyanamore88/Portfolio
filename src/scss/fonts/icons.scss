@@ -1,0 +1,60 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-facebook:before {
+	content: "\e900";
+ }
+ ._icon-github:before {
+	content: "\e901";
+ }
+ ._icon-instagram:before {
+	content: "\e902";
+ }
+ ._icon-telegram:before {
+	content: "\e903";
+ }
+ ._icon-university:before {
+	content: "\e904";
+ }
+ ._icon-developer:before {
+	content: "\e905";
+ }
+ ._icon-courses:before {
+	content: "\e906";
+ }
+ ._icon-designer:before {
+	content: "\e907";
+ }
+ ._icon-design:before {
+	content: "\e908";
+ }
+ ._icon-mobdev:before {
+	content: "\e909";
+ }
+ ._icon-webdevelopment:before {
+	content: "\e90a";
+ }
+ ._icon-whatsapp:before {
+	content: "\ea93";
+ }
+ ._icon-vk:before {
+	content: "\ea98";
+ }
+ ._icon-linkedin:before {
+	content: "\eac9";
+ }
+ 

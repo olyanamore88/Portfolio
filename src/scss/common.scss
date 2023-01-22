@@ -1,0 +1,134 @@
+// Заголовки, общие БЄМ блоки и проче...
+ .sub {
+   font-weight: 700;
+   font-size: rem(16);
+   line-height: math.div(24, 16);
+   margin-bottom: rem(6);
+   padding-left: rem(10);
+ }
+ .btn {
+   font-weight: 700;
+   font-size: rem(14);
+   line-height: math.div(21, 14);
+   background-color: $accentColor;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   padding: rem(12) rem(26);
+   border-radius: rem(5);
+ }
+ .title {
+  font-weight: 700;
+  line-height: math.div(60, 36);
+  position: relative;
+  padding-bottom: rem(4);
+  @include adaptiveValue("font-size", 36, 24);
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: $accentColor;
+    height: rem(3);
+    width: rem(60);
+  }
+ }
+ //========================================================================================================================================================
+ .wrapper {
+  position: relative;
+  transition: all 0.3s ease 0s;
+  &__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(255, 255, 255, 0.75);
+		visibility: hidden;
+		z-index: 3;
+		.menu-open & {
+		visibility: visible;
+		}
+	}
+}
+//========================================================================================================================================================
+.page {
+  &__about-me {
+  } 
+  &__experience {
+  }
+  &__scills {
+  }
+  &__portfolio {
+  }
+  &__pesponsive {
+  }
+  &__price {
+  }
+  &__contacts {
+  }
+}
+//========================================================================================================================================================
+// .btn-up {
+//   position: fixed;
+//   background-color: $accentColor;
+//   right: 20px;
+//   bottom: 20px;
+//   border-radius: 22px;
+//   cursor: pointer;
+//   width: 44px;
+//   height: 44px;
+// }
+
+// .btn-up::before {
+//   content: "";
+//   text-align: center;
+//   position: absolute;
+//   width: 20px;
+//   height: 20px;
+//   left: 12px;
+//   top: 12px;
+//   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 17V4M3 10l7-7 7 7'/%3E%3C/g%3E%3C/svg%3E");
+// }
+
+body {
+  min-height: 2000px;
+}
+
+.btn-up {
+  position: fixed;
+  background-color: #f57c00;
+  right: rem(15);
+  bottom: rem(15);
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 2;
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+.btn-up_hiding {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.btn-up-icon {
+  width: 40px;
+  height: 40px;
+  fill: currentcolor;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-up:hover {
+    background-color: #ef6c00;
+  }
+}
